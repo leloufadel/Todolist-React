@@ -1,16 +1,14 @@
 import React from 'react'
 import TodoItem from './TodoItem';
-// ...
-// removing this for the second method
-//const TodosList = ({ todosProps, setTodos }) => {
 
-    const TodosList = ({ todosProps, handlechange, delTodo }) => {
+
+    const TodosList = ({ todosProps, handlechange, delTodo, setUpdate }) => {
     return (
       <ul>
         {todosProps.map((todo) => (
           <TodoItem key={todo.id} itemProp={todo}
-        //    setTodos={setTodos}
         handleChange={handlechange}
+        setUpdate={setUpdate}
         delTodo={delTodo}
            
            />
